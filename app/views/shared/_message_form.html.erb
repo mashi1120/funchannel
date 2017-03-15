@@ -1,0 +1,11 @@
+<div class="row">
+<section class="micropost_form">
+　 <ul>
+      <% Message.all.each do |message| %>
+        <li class="message_line"><%= message.content %></li>
+        <li class="message_line"><%= message.role_name %></li>
+        <li class="message_line"><%= message.user.name %></li>
+      <% end %>
+  </ul>
+</section>
+</div>

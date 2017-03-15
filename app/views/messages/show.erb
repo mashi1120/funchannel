@@ -2,7 +2,7 @@
 <div class="row">
 <section class="micropost_form">
 　<% Message.all.each do |message| %>
-     <%= message.content %>
+     <li class="message_line"><%= message.content %></li>
   <% end %>
 </section>
 </div>
