@@ -1,0 +1,8 @@
+<h1>Q&A掲示板</h1>
+<div class="row">
+<section class="micropost_form">
+　<% Message.all.each do |message| %>
+     <%= message.content %>
+  <% end %>
+</section>
+</div>

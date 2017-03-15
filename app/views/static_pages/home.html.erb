@@ -1,2 +1,33 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% if logged_in? %>
+  <div class="row">
+    <div class="home_image" "col-md-4">
+    <li><%= image_tag("oekaki-2009817_640", :size => "360x240",) %></li>
+    <li><%= image_tag("phone-2056507_640", :size => "360x240",) %></li>
+    <li><%= image_tag("studio-1003136_640", :size => "360x240",) %></li>
+    </div>
+    
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/message_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="home_image" "col-md-4">
+    <li><%= image_tag("oekaki-2009817_640", :size => "360x240",) %></li>
+    <li><%= image_tag("phone-2056507_640", :size => "360x240",) %></li>
+    <li><%= image_tag("studio-1003136_640", :size => "360x240",) %></li>
+    </div>
+    <div class="home_image" "col-md-6">
+     
+    </div>
+    <div class="home_image" "col-md-6">
+      
+
+    </div>
+  </div>
+<% end %>

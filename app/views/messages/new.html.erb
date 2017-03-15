@@ -1,0 +1,17 @@
+<h1>掲示板にメッセージを投稿する</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@message) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> 
+
+      <%= f.label :role_name %>
+      <%= f.select :role_name, ["イラスト", "動画", "音楽"], class: 'form-control' %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control' %>
+
+      <%= f.submit "掲示板に投稿する", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
