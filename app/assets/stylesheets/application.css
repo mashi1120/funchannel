@@ -42,4 +42,5 @@ body > .container {
 }
 .message_line {
   list-style:none;
+  display: inline-block;
 }
